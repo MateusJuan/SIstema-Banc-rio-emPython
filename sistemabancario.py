@@ -32,7 +32,7 @@ def alterar_dados(contas):
 def excluir_conta(contas):
     codigo_desejado = input('Qual o Código?')
     for i, conta in enumerate(contas):
-        codigo, nome, idade, saldo, ano_nasc, cpf, cep, chave_pix = conta  
+        codigo, nome, idade, saldo, ano_nasc, cpf, cep, chave_pix = conta
         if codigo == codigo_desejado:
             print(f'Conta: {codigo}, Nome: {nome}, Idade: {idade}, Saldo: {saldo}, Data de Nascimento: {ano_nasc}, CPF: {cpf}, CEP: {cep}, Chave PIX: {chave_pix}')
             excluir = int(input('Para excluir, digite 1 ou 0 para ignorar? '))
@@ -60,20 +60,19 @@ def listar_contas(contas):
         print('Nenhuma pessoa cadastrada!')
     else:
         for conta in contas:
-            codigo, nome, idade, saldo, ano_nasc, cpf, cep, chave_pix = conta  
+            codigo, nome, idade, saldo, ano_nasc, cpf, cep, chave_pix = conta
             print(f'Conta: {codigo}, Nome: {nome}, Idade: {idade}, Saldo: {saldo}, Data de Nascimento: {ano_nasc}, CPF: {cpf}, CEP: {cep}, Chave PIX: {chave_pix}')
     return contas
 
 def visualizar_saldo(contas):
     codigo_desejado = input('Qual o Código da Conta? ')
     for conta in contas:
-        codigo, _, _, saldo, _, _, _, _ = conta  
+        codigo, _, _, saldo, _, _, _, _ = conta
         if codigo == codigo_desejado:
             print(f'Saldo da conta {codigo}: R${saldo:.2f}')
             return contas
     print(f'Conta com o código {codigo_desejado} não foi encontrada')
     return contas
-
 
 def transferencia_pix(contas):
     origem = input('Digite o código da conta de origem: ')
@@ -149,4 +148,4 @@ def main():
             break
 
 if __name__ == "__main__":
-    main()
+    main(),
